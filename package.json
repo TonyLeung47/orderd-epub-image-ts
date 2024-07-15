@@ -1,7 +1,7 @@
 {
   "name": "orderd-epub-image-ts",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "homepage": "https://tonyleung47.github.io/orderd-epub-image-ts",
   "scripts": {

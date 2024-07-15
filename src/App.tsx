@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import "./App.css";
 import { epub2Image } from "./Epub2Image";
@@ -50,14 +50,14 @@ function App() {
       </div>
       <div className="grid">
         {files.map((fileInfo, index) => (
-          <>
-            <div key={index}>{fileInfo.file.name}</div>
+          <Fragment key={index}>
+            <div>{fileInfo.file.name}</div>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <button onClick={() => setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index))}>×</button>
               <button onClick={() => onDownload(fileInfo)}>Download</button>
               <div style={{ color: "red" }}>{fileInfo.message}</div>
             </div>
-          </>
+          </Fragment>
         ))}
       </div>
     </div>

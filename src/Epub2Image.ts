@@ -3,6 +3,8 @@ import JSZip from "jszip";
 const IMAGE_SUFFIX = [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp", ".avif"];
 
 function reolvePath(basePath: string, relativePath: string) {
+  if (basePath[0] !== "/") basePath = "/" + basePath;
+  if (basePath[basePath.length - 1] !== "/") basePath += "/";
   const resolveUrl = new URL(relativePath, "https://analsex.com" + basePath);
   return resolveUrl.pathname.replace(/^\/+/, "");
 }
