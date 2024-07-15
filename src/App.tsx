@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="container">
       <a href="https://github.com/TonyLeung47/orderd-epub-image-ts">Github</a>
-      <h1>Epub Image</h1>
+      <h1>Extract Epub Images</h1>
       <div className="dropzone" {...getRootProps()}>
         <input {...getInputProps()} />
         {isDragActive ? <p>Drop the files here ...</p> : <p>Drag 'n' drop epub files here, or click to select files</p>}
