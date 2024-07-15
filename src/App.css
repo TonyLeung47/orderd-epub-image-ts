@@ -1,0 +1,69 @@
+:root{
+  --primary: #007bff;
+  --text-color: #1d1d1d;
+  --bg-color: #f8f9fa;
+  --hover-color: #6ca2db;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1d1d1d;
+    --text-color: #f8f9fa;
+    --hover-color: #35577c;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  width: 100dvw;
+}
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+/* Basic style for the drag-and-drop area */
+.dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  width: 1000px; 
+  height: 300px;
+  max-width: 100%;
+  border: 3px dashed var(--primary); /* Dashed border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center-align text */
+  color: var(--text-color) ; /* Text color */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Style when drag is active */
+.dropzone-active {
+  background-color: var(--hover-color) ; /* Slightly darker background */
+}
+
+/* Style on hover */
+.dropzone:hover {
+  background-color: var(--hover-color); /* Even darker background */
+}
+
+/* Style for file selection button (input) - generally hidden */
+.dropzone input {
+  display: none; /* Hide input element */
+}
